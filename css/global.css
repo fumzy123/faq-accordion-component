@@ -1,0 +1,56 @@
+/* 
+    This stylesheet specifies your general CSS reset
+    for all the elements in your html document. It will also define
+    globally accessible CSS variables.
+
+*/
+
+/* Reset Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin and padding on all elements, and
+   Reset the default line height for all elements in the document 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+/* Enable Smooth scrolling betweeen section */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Define a Universal Typography for your body */
+body {
+    font-family: 'Work Sans', sans-serif ;
+}
+
+/* Define sensible media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* All input and form controls should inherit the font from their parent element*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+/* Word Wrapping */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Reset the default button in your html document */
+button {
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+}

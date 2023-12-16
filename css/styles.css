@@ -1,0 +1,6 @@
+/**
+    All the Stylesheets will be imported into this one file.
+    This file will then be linked in the html document.
+**/
+@import url('./modern-normalize.css');
+@import url('./global.css');
