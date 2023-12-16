@@ -47,6 +47,16 @@ Users should be able to:
 
 ## My process
 
+### Understanding the HTML Structure
+I start with the Mobile View:
+  What I am seeing is an h1 tag and an image in a flexbox. Flexbox has some margin to add space between the flexbox and the list.
+
+  The list is a list of div elements that are flexboxes because they have an image with the text. 
+  
+  How do I make them an accordion thou. How do I add an extra div that only gets revealed when the image is clicked.
+
+
+
 ## Problems I encountered
 
 
