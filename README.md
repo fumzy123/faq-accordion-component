@@ -48,12 +48,22 @@ Users should be able to:
 ## My process
 
 ### Understanding the HTML Structure
-I start with the Mobile View:
-  What I am seeing is an h1 tag and an image in a flexbox. Flexbox has some margin to add space between the flexbox and the list.
+1. I start with the Mobile View:
+  - What I am seeing is an h1 tag and an image in a flexbox. Flexbox has some margin to add space between the flexbox and the list.
 
-  The list is a list of div elements that are flexboxes because they have an image with the text. 
+  - The list is a list of div elements that are flexboxes because they have an image with the text. 
   
-  How do I make them an accordion thou. How do I add an extra div that only gets revealed when the image is clicked.
+  - How do I make them an accordion thou. How do I add an extra div that only gets revealed when the image is clicked.
+
+2. I am currently working on the Background Image:
+  a. How do I make the Image the entire width of the browser window ? I simply set the width of the image to be 100%. This way it takes the full width of the image container that it is in.
+
+  b. How do I make the FAQ container float in front of the image and background ? I need the faq's container out of the html document flow. I want it to float in front of the background image container.
+
+  There are two ways that I am thinking of achieving this
+  - Find a way to set the background of the body to both color and image pattern. Then use a flexbox to center the FAQs container in the middle of the page.
+
+  - Use Absolute positioning to place the FAQs container in the middle of the page.
 
 
 
@@ -62,8 +72,12 @@ I start with the Mobile View:
 
 
 ## What I learned
+1. `list-style`: This is a CSS shorthand property that allows you to set all the list style properties at once. list-style-image | list-style-position | list-style-type.
+2. `border-top`: This is a CSS shorthand property that allows you to set the. `border-width` | `border-style`, and | `border-color` for the top border. e.g.
 
-
+```css
+border-top: 2px solid red;
+```
 
 ## Useful resources
 

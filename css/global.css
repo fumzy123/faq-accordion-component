@@ -28,6 +28,10 @@ html {
 /* Define a Universal Typography for your body */
 body {
     font-family: 'Work Sans', sans-serif ;
+    background: hsl(275, 100%, 97%)
+    
+    /* background: hsl(275, 100%, 97%) url('../assets/images/background-pattern-mobile.svg') no-repeat;
+    background-size: 100%; */
 }
 
 /* Define sensible media defaults */

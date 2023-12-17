@@ -5,4 +5,5 @@
 @import url('./modern-normalize.css');
 @import url('./global.css');
 @import url('./components/faqs.css');
+@import url('./components/pattern-wrapper.css');
 @import url('./utils.css');
