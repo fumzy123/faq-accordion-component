@@ -17,3 +17,10 @@
     background-repeat: no-repeat;
 
 }
+
+/* sm */
+@media (min-width: 640px) {
+    .pattern__wrapper{
+        background-image: url('../../assets/images/background-pattern-desktop.svg');
+    }
+}

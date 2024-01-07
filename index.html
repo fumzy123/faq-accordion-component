@@ -46,10 +46,12 @@
 
           <div class="faqs__question">
             <p class="faqs__q-title faqs__q1-title">What is Frontend Mentor, and how will it help me ?</p>
-            <img class="faqs__q1-icon" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            <button id="btn-1" class="faqs__q1-icon" onclick="displayAnswer(event)">
+              <img  class="faqs__btn-img" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            </button>
           </div>
 
-          <p class="faqs__answers faqs__a1">
+          <p id="ans-1" class="faqs__answers faqs__a1 hide-ans">
             Frontend Mentor offers realistic coding challenges to help developers improve their 
             frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
             all levels and ideal for portfolio building.
@@ -60,11 +62,13 @@
         <li class="faqs__item">
 
           <div class="faqs__question">
-            <p class="faqs__q-title faqs__q2-title">  Is Frontend Mentor free?</p>
-            <img class="faqs_q2-icon" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            <p class="faqs__q-title faqs__q2-title">Is Frontend Mentor free?</p>
+            <button id="btn-2" class="faqs__q2-icon" onclick="displayAnswer(event)">
+              <img  class="faqs__btn-img" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            </button>
           </div>
 
-          <p class="faqs__answers faqs__a2">
+          <p id="ans-2" class="faqs__answers faqs__a2 hide-ans">
             Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
             option providing access to a range of projects suitable for all skill levels.
           </p>
@@ -75,10 +79,12 @@
 
           <div class="faqs__question">
             <p class="faqs__q-title faqs__q3-title">Can I use Frontend Mentor projects in my portfolio?</p>
-            <img class="faqs_q3-icon" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            <button id="btn-3" class="faqs__q3-icon" onclick="displayAnswer(event)">
+              <img  class="faqs__btn-img" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            </button>
           </div>
 
-          <p class="faqs__answers faqs__a3">
+          <p id="ans-3" class="faqs__answers faqs__a3 hide-ans">
             Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
             way to showcase your skills to potential employers!
           </p>
@@ -89,10 +95,12 @@
 
           <div class="faqs__question">
             <p class="faqs__q-title faqs__q4-title">How can I get help if I'm stuck on a challenge?</p>
-            <img class="faqs_q4-icon" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            <button id="btn-4" class="faqs__q4-icon" onclick="displayAnswer(event)">
+              <img class="faqs__btn-img" src="./assets/images/icon-plus.svg" alt="plus-icon"/>
+            </button>
           </div>
 
-          <p class="faqs__answers faqs__a4">
+          <p id="ans-4" class="faqs__answers faqs__a4 hide-ans">
             The best place to get help is inside Frontend Mentor's Discord community. There's a help 
             channel where you can ask questions and seek support from other community members.
           </p>
@@ -103,9 +111,32 @@
 
     </div>
 
-
   </section>
 
+  <script>
+    function displayAnswer(event) {
+      // Event.target is the element that triggered the event.
+      let img = event.target;
+
+      // The event.currentTarget tells us the element that the event listener
+      // is attached to. The element that has the onclick attribute or the 
+      // addEventListener method.
+      let button = event.currentTarget;
+
+      // console.log(img, button, event);
+
+
+      // Get the button's ID
+      let btnId = button.id;
+      console.log(btnId);
+
+      // Based on the button's ID we will toggle
+      let ans = document.getElementById(`ans-${btnId.slice(-1)}`);
+      // console.log(ans);
+      ans.classList.toggle("hide-ans");
+      
+    }
+  </script>
 
 
   

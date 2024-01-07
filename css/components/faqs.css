@@ -1,4 +1,7 @@
-
+.faqs{
+    margin: 0 1rem 0;
+    /* max-width: ; */
+}
 
 .faqs__container {
     /** Background **/
@@ -65,7 +68,12 @@
 }
 
 .faqs__q-title {
+    font-size: 0.95rem;
     max-width: 45ch;
+}
+
+.faqs__btn-img {
+    min-width: 30px;
 }
 
 .faqs__answers {
@@ -77,12 +85,32 @@
     max-width: 45ch;
 }
 
+/** Toggle Class **/
+/** This will hide the ans **/
+.hide-ans{
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 1s ease, overflow 1s ease;
+    
+    /* transition-property: max-height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease; */
+    /* transition-delay: 1s; */
+
+}
+
 
 /** ADD MOBILE RESPONSIVENESS TO THE FAQ COMPONENT **/
-@media(max-width:475px) {
-    .faqs{
-        margin: 0 1rem 0;
+@media(min-width:475px) {
 
+    .faqs{
+        margin: 0;
+    }
+
+    .faqs__q-title{
+        font-size: 1rem;
     }
 }
 

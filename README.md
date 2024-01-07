@@ -145,6 +145,7 @@ I solved this problem by moving the styling class for my container, `faqs_contai
 ```css
 border-top: 2px solid red;
 ```
+3. The difference between event.target and event.currentTarget. Event.target refers to the element that fired the event. Whereas event.currentTarget refers to the element that has the event listener attached to it.
 
 ## Useful resources
 
