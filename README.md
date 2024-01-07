@@ -68,7 +68,74 @@ Users should be able to:
 
 
 ## Problems I encountered
+1. Placing the image pattern: I found it difficult to place the image pattern in a way that is responsive because I did not understand the fundamentals of how images worked on the web browser. I discovered that images do not automatically fit their container when you put them in one. You need to tell them to by using the `max-width` property.
 
+```html
+<div class="pattern__wrapper">
+      <img class="" src="./assets/images/background-pattern-mobile.svg" alt="mobile-background-pattern"/>
+</div>
+```
+
+To achieve the final mobile design. I decided to use `background-image` property from CSS.
+```css
+    background-image: url('../../assets/images/background-pattern-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+```
+The real magic however was using the `background-size` property. This tells CSS how to fit the image inside the background. The cover scales the image
+while maintaining its aspect ratio, and so some parts where cropped out.
+
+2. Placing the FAQs container in front of the pattern: For some reason I had a hard time implementing this one. I knew it had something to do with `position` property but I defaulted to using the _absolute_ value when relative was a better choice here. The _relative_ `position` value positions the HTML element relative to itself while preserving its space in the DOM / document flow. So other elements still respect its presence. I set the position to relative and moved the element up a little.
+
+```css
+.faqs {
+    /** Background **/
+    background-color: white;
+
+    /** Box Model **/
+    border-radius: 15px;
+    padding: 1.5rem 1.5rem;
+
+    /** Position **/
+    /* position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    position: relative;
+    top: -40px;
+
+}
+```
+
+3. Adding Margins to the faqs question section beyond the xs view: I typically add in a container utility class directly on my sections but for this project i ran into a situation where I needed to add in a small left and right margin for my `faqs` section when the screen was below the 475px. Unfortunately I couldn't achieve this because I my container utility class was directly on my  section and it was overwriting the margins set in just created in the `faqs.css` class. Two separate classes controlling the same CSS property on the same element is not a good thing. One will overrite. The latest one of course.
+```css
+/* MOBILE FIRST CONTAINER UTILITY CLASS 
+    This utility class wraps each section of our website to provide alignment and 
+    responsiveness.
+*/
+.container {
+    /** Box Model for all sections **/
+    width: 100%;
+    margin-inline: auto;
+    border: 2px solid red;
+}
+```
+
+How do I know this because of the order of my stylesheets. 
+```css
+/**
+    All the Stylesheets will be imported into this one file.
+    This file will then be linked in the html document.
+**/
+@import url('./modern-normalize.css');
+@import url('./global.css');
+@import url('./components/faqs.css');
+@import url('./components/pattern.css');
+@import url('./utils.css');
+
+```
+
+I solved this problem by moving the styling class for my container, `faqs_container` and my utility class `container` unto a `div` element that wraps the contents of my `faqs`. This way I can now add a margin to the class on my section. This was super helpful. Perhaps it is not always a good idea to place your container utility class on your section element. What if you want to control the same property. It might be more useful to wrap the contents of your section with the container utility and not the entire section.
 
 
 ## What I learned

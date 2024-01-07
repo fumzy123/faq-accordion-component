@@ -1,0 +1,19 @@
+
+/* .pattern-container__img {
+    width: 100%;
+} */
+
+.pattern__wrapper {
+
+    /** Box Model **/
+    height: 200px;
+    /* border: 2px solid green; */
+    /* margin-top: 5rem; */
+
+    /** Background **/
+    background-color: green;
+    background-image: url('../../assets/images/background-pattern-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}

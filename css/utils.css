@@ -36,13 +36,15 @@
     /** Box Model for all sections **/
     width: 100%;
     margin-inline: auto;
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 
 
 /* MOBILE FIRST PRE-DEFINED MEDIA QUERIES 
     being used to modify our container utility class
 */
+
+
 
 /* xs */
 @media (min-width: 475px) {

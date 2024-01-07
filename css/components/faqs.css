@@ -1,20 +1,21 @@
 
 
-.faqs {
+.faqs__container {
     /** Background **/
     background-color: white;
 
     /** Box Model **/
     border-radius: 15px;
     padding: 1.5rem 1.5rem;
+    /* margin-left: 10rem; */
 
     /** Position **/
-    position: absolute;
-    top: 50%;
+    /* position: absolute;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%)
-
-
+    transform: translate(-50%, -50%); */
+    position: relative;
+    top: -40px;
 
 }
 
@@ -24,7 +25,7 @@
     /** Layout **/
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
 
 }
 
@@ -75,3 +76,13 @@
     color: hsl(292, 16%, 49%); /* Grayish purple: */
     max-width: 45ch;
 }
+
+
+/** ADD MOBILE RESPONSIVENESS TO THE FAQ COMPONENT **/
+@media(max-width:475px) {
+    .faqs{
+        margin: 0 1rem 0;
+
+    }
+}
+
